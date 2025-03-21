@@ -1,0 +1,23 @@
+name: Amnesia
+on: workflow_dispatch
+
+env:
+  NAME: Luigi
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    env:
+      ENTREPRISE: Hetic
+    steps:
+      - name: "Dit bonjour"
+        run: echo "Salut $NAME ! JE travaille cette semaine pour $ENTREPRISE? Alors bon $DAY à toi !"
+        env:
+          DAY: Vendredi
+      - name: "Vendredi ?"
+        run: echo " Quel jour sommes nous ? $DAY ?"
+  say_goodbaye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Dit au revoir"
+        run: echo "Au revoir $NAME ! Tu travaille pour qui ? $ENTREPRISE"
