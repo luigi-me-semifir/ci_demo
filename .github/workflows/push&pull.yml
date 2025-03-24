@@ -16,7 +16,7 @@ jobs:
         run: echo "$PUSH"
 
   pull_request:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     if: ${{ github.event_name == 'pull_request'}}
     steps:
       - name: Checkout
